@@ -51,7 +51,8 @@ class App
     public function getDb(): PDO
     {
         if (is_null($this->db)) {
-            $this->db = new PDO('', '', '', []);
+            // mysql, localhost, speculi, gilles, 19690512
+            $this->db = new PDO('mysql:host=localhost;dbname=speculi', 'gilles', '19690512');
         }
         return $this->db;
     }

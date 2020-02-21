@@ -22,7 +22,8 @@ class RecetteCtrl
 
     public function index()
     {
-        echo 'Coucou';
+        $recettes = $this->recetteService->findAll();
+        $this->render('recette.index', compact('recettes'));
     }
 
     public function show($id)
@@ -43,5 +44,25 @@ class RecetteCtrl
     public function update(Recette $recette)
     {
 
+    }
+
+    public function list()
+    {
+
+    }
+
+    public function render(string $view, $attributes = [])
+    {
+        ob_start();
+        extract($attributes);
+        // $view = 'recette.show'; => view/recette/show.php
+        require dirname(__DIR__) . '/view' . '/' . str_replace('.', '/', $view) . '.php';
+        $content = ob_get_clean();
+        require dirname(__DIR__) . '/view/template.php';
+
+        /*
+        $attributes = compact('recette', 'recettes'); // ['recette' => 'test', 'recettes' => 'listetest']
+        extract($attributes); // $recette = 'test'; $recettes = 'listetest';
+        */
     }
 }
