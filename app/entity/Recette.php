@@ -7,145 +7,144 @@ namespace App\Entity;
 class Recette
 {
     /**
-     * @var
+     * @var int
      */
     private $idRec;
     /**
-     * @var
+     * @var string
      */
     private $libelle;
     /**
-     * @var
+     * @var string
      */
     private $photo;
     /**
-     * @var
+     * @var string
      */
     private $type;
     /**
-     * @var
+     * @var int
      */
     private $pourCombien;
     /**
-     * @var
+     * @var bool
      */
     private $vegetarienne;
     /**
-     * @var
+     * @var int
      */
     private $idPays;
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getIdRec()
+    public function getIdRec(): int
     {
         return $this->idRec;
     }
 
     /**
-     * @param mixed $idRec
+     * @param int $idRec
      */
-    public function setIdRec($idRec): void
+    public function setIdRec(int $idRec): void
     {
         $this->idRec = $idRec;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getLibelle()
+    public function getLibelle(): string
     {
         return $this->libelle;
     }
 
     /**
-     * @param mixed $libelle
+     * @param string $libelle
      */
-    public function setLibelle($libelle): void
+    public function setLibelle(string $libelle): void
     {
         $this->libelle = $libelle;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getPhoto()
+    public function getPhoto(): string
     {
         return $this->photo;
     }
 
     /**
-     * @param mixed $photo
+     * @param string $photo
      */
-    public function setPhoto($photo): void
+    public function setPhoto(string $photo): void
     {
         $this->photo = $photo;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $type
+     * @param string $type
      */
-    public function setType($type): void
+    public function setType(string $type): void
     {
         $this->type = $type;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getPourCombien()
+    public function getPourCombien(): int
     {
         return $this->pourCombien;
     }
 
     /**
-     * @param mixed $pourCombien
+     * @param int $pourCombien
      */
-    public function setPourCombien($pourCombien): void
+    public function setPourCombien(int $pourCombien): void
     {
         $this->pourCombien = $pourCombien;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getVegetarienne()
+    public function isVegetarienne(): bool
     {
         return $this->vegetarienne;
     }
 
     /**
-     * @param mixed $vegetarienne
+     * @param bool $vegetarienne
      */
-    public function setVegetarienne($vegetarienne): void
+    public function setVegetarienne(bool $vegetarienne): void
     {
         $this->vegetarienne = $vegetarienne;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getIdPays()
+    public function getIdPays(): int
     {
         return $this->idPays;
     }
 
     /**
-     * @param mixed $idPays
+     * @param int $idPays
      */
-    public function setIdPays($idPays): void
+    public function setIdPays(int $idPays): void
     {
         $this->idPays = $idPays;
     }
-
 
 }

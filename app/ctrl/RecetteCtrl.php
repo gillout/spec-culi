@@ -22,8 +22,7 @@ class RecetteCtrl
 
     public function index()
     {
-        $recettes = $this->recetteService->findAll();
-        $this->render('recette.index', compact('recettes'));
+
     }
 
     public function show($id)
@@ -48,9 +47,15 @@ class RecetteCtrl
 
     public function list()
     {
-
+        $recettes = $this->recetteService->findAll();
+        $this->render('recette.list', compact('recettes'));
     }
 
+    /**
+     * Permet d'envoyer à la vue $view les données passées en paramètres
+     * @param string $view Correspond au nom de la vue à appeler formatée de la form "module.nomDeLaVue"
+     * @param array $attributes Correspond à tous les paramètres passées sous forme de tableau "clef=>valeur" de façon à ce qu'ils soient retrouvés dans la vue "$clef = valeur"
+     */
     public function render(string $view, $attributes = [])
     {
         ob_start();

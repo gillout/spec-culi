@@ -26,9 +26,7 @@ class RecetteManager
     {
         $this->pdo->exec("set names utf8");
         $stmt = $this->pdo->query('SELECT * FROM recette');
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $results;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
 
 }

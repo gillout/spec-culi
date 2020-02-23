@@ -25,7 +25,43 @@ class RecetteService
      */
     public function findAll(): array
     {
-        return $this->recetteManager->findAll();
+        $results = $this->recetteManager->findAll();
+        /*
+        Peut être remplacé par :
+        return is_array($results) ? array_map([$this, 'convert'], $results) : [] ;
+        */
+        $recettes = [];
+        if (is_array($results)) { // Le contenu du if peut etre remplacer
+            foreach ($results as $result) {
+                $recettes[] = $this->convert($result);
+            }
+        }
+        return $recettes;
+    }
+
+    /**
+     *
+     */
+    public function findOne($id): int
+    {
+
+    }
+
+    /**
+     * Convertie un tableau associatif contenant une recette sous la forme clef=>valeur en objet Recette
+     * @param array $recette
+     * @return Recette
+     */
+    private function convert(array $recette): Recette
+    {
+        $obj = new Recette();
+        foreach ($recette as $key=>$value) {
+            $setter = 'set' . ucfirst($key);
+            if (!is_null($value) && method_exists($obj, $setter)) {
+                $obj->$setter($value);
+            }
+        }
+        return $obj;
     }
 
 }
