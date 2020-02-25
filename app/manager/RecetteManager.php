@@ -29,4 +29,12 @@ class RecetteManager
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function findOne($id): array
+    {
+        $this->pdo->exec("set names utf8");
+        $stmt = $this->pdo->prepare('SELECT * FROM recette WHERE idRec =:idRec');
+        $stmt->bindParam(':idRec', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }

@@ -42,9 +42,10 @@ class RecetteService
     /**
      *
      */
-    public function findOne($id): int
+    public function findOne($id): Recette
     {
-
+        $result = $this->recetteManager->findOne($id);
+        return $this->convert($result);
     }
 
     /**

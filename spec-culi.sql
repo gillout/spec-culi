@@ -59,6 +59,9 @@ CREATE TABLE IF NOT EXISTS pays (
 --
 
 INSERT INTO pays (idPays, nom) VALUES (NULL, '');
+INSERT INTO pays (idPays, nom) VALUES (NULL, 'France');
+INSERT INTO pays (idPays, nom) VALUES (NULL, 'Vietnam');
+INSERT INTO pays (idPays, nom) VALUES (NULL, 'Espagne');
 
 -- --------------------------------------------------------
 
@@ -78,8 +81,18 @@ CREATE TABLE IF NOT EXISTS recette (
 	FOREIGN KEY (idPays) REFERENCES pays (idPays)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays, idIngr)
-	VALUES (NULL, '', '', '', , FALSE, );
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, '', '', '', FALSE, );
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, 'Choucroute', 'choucroute.jpg', 'Plat', 4, FALSE, 1);
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, 'Pot au feu', 'pot-au-feu.jpg', 'Plat', 6, FALSE, 1);
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, 'Pho', 'pho.jpg', 'Soupe', 8, FALSE, 2);
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, 'Boudin aux pommes', 'boudin-aux-pommes.jpg', 'Plat', 3, FALSE, 1);
+INSERT INTO recette (idRec, libelle, photo, type, pourCombien, vegetarienne, idPays)
+	VALUES (NULL, 'Paella', 'paella.jpg', 'Plat', 10, FALSE, 3);
 
 -- --------------------------------------------------------
 

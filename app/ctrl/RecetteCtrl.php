@@ -27,7 +27,8 @@ class RecetteCtrl
 
     public function show($id)
     {
-
+        $recette = $this->recetteService->findOne($id);
+        $this->render('recette.show', compact('recette'));
     }
 
     public function add(Recette $recette)
