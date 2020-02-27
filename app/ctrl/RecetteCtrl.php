@@ -22,7 +22,8 @@ class RecetteCtrl
 
     public function index()
     {
-
+        $images = [];
+        $this->render('recette.index', compact('images'));
     }
 
     public function show($id)

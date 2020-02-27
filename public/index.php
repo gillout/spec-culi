@@ -8,10 +8,6 @@ require '../app/Autoloader.php';
 
 Autoloader::register();
 
-$test = new RecetteCtrl(App::getInstance()->getDb());
-
-$test->index();
-
 if (!isset($_GET['target']) || $_GET['target'] == '' || $_GET['target'] == 'recette') {
     $ctrl = new recetteCtrl(App::getInstance()->getDb());
     if (!isset($_GET['action'])) {
@@ -22,6 +18,8 @@ if (!isset($_GET['target']) || $_GET['target'] == '' || $_GET['target'] == 'rece
         $id = intval($_GET['id']);
         $ctrl->show($id);
     }
+}
+/*
 } elseif (isset($_GET['']) && $_GET[''] != '') {
 
 } elseif (isset($_GET['']) && $_GET[''] != '') {
@@ -29,4 +27,5 @@ if (!isset($_GET['target']) || $_GET['target'] == '' || $_GET['target'] == 'rece
 } elseif (isset($_GET['']) && $_GET[''] != '') {
 
 }
+*/
 

@@ -1,7 +1,5 @@
-<?php
+<!DOCTYPE html>
 
-?>
-<!--
 <html lang="fr">
 
     <head>
@@ -14,8 +12,8 @@
 
         <title>Spécialités culinaires</title>
 
-        <link rel="stylesheet" href="../../bootstrap-4.2.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../../style/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/style/style.css">
 
     </head>
 
@@ -57,25 +55,9 @@
                 <a href=""><img src="../../public/img/canada.png" alt="" title=""></a>
             </figure>
         </header>
--->
-        <?php // $content ?>
-        <!--
-        <section>
-            <h1>Bienvenue</h1>
 
-            <div>
-                <figure>
-                    <a href=""><img src="../../public/img/gateau.jpg" alt="Gâteau" title="Gâteau"></a>
-                    <a href=""><img src="../../public/img/ustensiles.jpg" alt="Ustensiles" title="Ustensiles"></a>
-                    <a href=""><img src="../../public/img/recette.jpg" alt="Recette" title="Recette"></a>
-                    <a href=""><img src="../../public/img/assiette.jpg" alt="Assiette" title="Assiette"></a>
-                    <a href=""><img src="../../public/img/madeleines.jpg" alt="Madeleines" title="Madeleines"></a>
-                    <a href=""><img src="../../public/img/pizza.jpg" alt="Pizza" title="Pizza"></a>
-                </figure>
-            </div>
-        </section>
-        -->
-<!--
+        <?= $content ?>
+
         <footer>
             <div>
                 <p>Infos sur des ingrédients un peu particuliers ou peu connus</p>
@@ -98,4 +80,3 @@
     </body>
 
 </html>
--->

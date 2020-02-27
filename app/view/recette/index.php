@@ -1,8 +1,4 @@
-<?php
 
-//ob_start();
-?>
-<!--
 <section>
     <h1>Bienvenue</h1>
 
@@ -17,6 +13,4 @@
         </figure>
     </div>
 </section>
--->
-<?php
-//$content = ob_get_clean();
+
